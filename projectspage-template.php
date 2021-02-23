@@ -6,31 +6,18 @@
  */
 get_header();
 ?>
- <main>
-    <section class="masthead" style="background-image: url(<?php the_field('masthead_image'); ?>);">
+ <main class="project-page">
+    <section class="masthead">
       <div>
         <h1><?php the_field('masthead_title'); ?></h1>
       </div>
     </section>
-    <section class="row-one">
+    <section class="row-1">
       <article>
-        <img src="<?php the_field('image_one'); ?>" alt="image one">
+        <img src="<?php the_field('project_img'); ?>" alt="project img">
       </article>
       <article>
-        <img src="<?php the_field('image_two'); ?>" alt="image one">
-      </article>
-      <article>
-        <img src="<?php the_field('image_three'); ?>" alt="image one">
-      </article>
-    </section>
-    <section class="row-two">
-      <article>
-        <h2><?php the_field('title_1'); ?></h2>
-        <p><?php the_field('text_1'); ?></p>
-      </article>
-      <article>
-        <h2><?php the_field('title_2'); ?></h2>
-        <p><?php the_field('text_2'); ?></p>
+        <a href="<?php the_field('project');?>">Go</a>
       </article>
     </section>
     <section class="all-posts">
@@ -56,7 +43,7 @@ get_header();
             </header>
             <div>
                 <?php the_excerpt(10); ?>
-                <a href="<?php the_permalink(); ?>">Read More</a>
+                <a href="<?php the_permalink(); ?>">Take a look</a>
             </div>
         </article>
         <?php
@@ -69,7 +56,7 @@ get_header();
       <?php
         $args1 = array(
           'post_type' => 'post',
-          'category_name' => 'Example One',
+          'category_name' => 'thoughts',
           'post_status' => 'publish'
         );
         $arr_posts1 = new WP_Query($args1);
@@ -89,7 +76,7 @@ get_header();
             <div>
                 <?php the_excerpt(); ?>
                 <?php the_category(); ?>
-                <a href="<?php the_permalink(); ?>">Read More</a>
+                <a href="<?php the_permalink(); ?>">Take a look</a>
             </div>
         </article>
         <?php

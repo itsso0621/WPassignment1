@@ -17,7 +17,7 @@
 	<header>
 		<nav>
 			<a href="<?php echo esc_url(home_url()); ?>">
-				<img src="<?php echo esc_url(home_url('wp-content/uploads/2021/02/logo.jpg'));?>" alt="logo">
+				<img src="<?php echo esc_url(home_url('wp-content/uploads/2021/02/logo.png'));?>" alt="logo">
 			</a>
 			<?php 
 				wp_nav_menu(array(
